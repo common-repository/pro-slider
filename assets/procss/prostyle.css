@@ -1,0 +1,853 @@
+    
+/* Custom Testimonial Crousel And Image Crousel */
+div#imageCrousel, div#imageMobCrousel {
+    margin: 2% auto;
+    height: auto;
+    width: 100%;
+    justify-content: center;
+    background-color:#F2F2F2;
+}
+      .imageMobBox {
+        position: relative;
+        float: left;
+        opacity: 0.5;
+        justify-content: center;
+        margin: auto;
+        width: 33.33%;
+        max-width: 33.33%;
+        display: flex;
+    }
+
+div#imageMobCrousel, .imgContentBox, .imgMobContentBox {
+  display: none;
+}
+
+
+img.imageMobBoxIcon, img.imageBoxIcon {
+          width: 100%;
+          max-width: 400px;
+          box-shadow: 0 4px 16px rgba(69, 75, 96, 0.5);
+      }
+
+      .imageBox {
+        margin: 0 auto;
+        position: relative;
+        float: left;
+        opacity: 0.5;
+        width: 20%;
+        max-width: 20%;
+        justify-content: center;
+        display: flex;
+    }
+    .activeImg {
+      opacity: 1;
+    }
+    .activeImg img {
+    border: 2px solid #31384d;
+    transform: scale(2,2);
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: activeImgAnimation;
+    animation-timing-function: ease, ease;
+}
+
+@keyframes activeImgAnimation {   
+    from{ border-color: #31384d24;}
+    to{ border-color: #31384d;}
+}
+
+    .imgDiv {
+      height: 450px;
+    }
+
+.subHead{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.imgContentTxt{
+    font-size: 19px;
+    text-align: center;
+    font-family: EB Garamond , serif;
+    color: #3e3e3e;
+}
+
+.subHead, .imgContentTxt{
+    justify-content: center;
+    margin: 0 auto;
+}
+
+ .subHead {
+    padding: 20px 0px;
+    text-align: center;
+    line-height: 60px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #171c21;
+}
+.directionImgArrow span {
+    position: absolute!important;
+    color: #3e3e3e;
+    top: 15%;
+    cursor: pointer;
+    display: block;
+    padding: 5% 3.5%;
+    font-size: 14px;
+}
+
+span.prevImgLeft {
+    left: -15px;
+}
+
+span.nextImgRight {
+    right: -15px;
+}
+.imageOver {
+max-width: 90%;
+padding: 20px 0px;
+min-height: 200px;
+}
+
+.imageOver, .imageMobOver {
+overflow: hidden;
+margin: 0 auto;
+justify-content: center;
+position: relative;
+height: 100%;
+}
+
+.hide{
+display: none;
+}
+
+.forwardImgSlide{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: -20%;
+}
+@keyframes forwardImgSlide {   
+    from{ left: 0%}
+    to{ left: -20%}
+}
+
+.forwardImgSlide2{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide2;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 0%;
+}
+@keyframes forwardImgSlide2 {   
+    from{ left: 20%}
+    to{ left: 0%}
+}
+
+.forwardImgSlide3{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide3;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 20%;
+}
+@keyframes forwardImgSlide3 {   
+    from{ left: 40%; opacity: 1;}
+    to{ left: 20%; opacity: 0.5;}
+}
+
+.forwardImgSlide4{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide4;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 40%;
+    opacity: 1;
+}
+@keyframes forwardImgSlide4 {   
+    from{ left: 60%; opacity: 0.5;}
+    to{ left: 40%; opacity: 1;}
+}
+
+.forwardImgSlide5{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide5;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 60%;
+}
+@keyframes forwardImgSlide5 {   
+    from{ left: 80%;}
+    to{ left: 60%;}
+}
+
+.forwardImgSlide6{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgSlide6;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 80%;
+}
+@keyframes forwardImgSlide6 {   
+    from{ left: 100%}
+    to{ left: 80%}
+}
+
+.reverseImgSlide{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 0%;
+}
+@keyframes reverseImgSlide {   
+    from{ left: -20%}
+    to{ left: 0%}
+}
+
+.reverseImgSlide2{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide2;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 20%;
+}
+@keyframes reverseImgSlide2 {   
+    from{ left: 0%}
+    to{ left: 20%}
+}
+
+.reverseImgSlide3{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide3;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 40%;
+    opacity: 1;
+}
+@keyframes reverseImgSlide3 {   
+    from{ left: 20%; opacity: 0.5;}
+    to{ left: 40%; opacity: 1;}
+}
+
+.reverseImgSlide4{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide4;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 60%;
+}
+@keyframes reverseImgSlide4 {   
+    from{ left: 40%; opacity: 1; }
+    to{ left: 60%; opacity: 0.5; }
+}
+
+.reverseImgSlide5{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide5;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 80%;
+}
+@keyframes reverseImgSlide5 {   
+    from{ left: 60%}
+    to{ left: 80%}
+}
+
+.reverseImgSlide6{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseImgSlide6;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 100%;
+}
+@keyframes reverseImgSlide6 {   
+    from{ left: 80%}
+    to{ left: 100%}
+}
+
+.forwardImgMobSlide4{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgMobSlide4;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 66.6%;
+}
+@keyframes forwardImgMobSlide4 {   
+    from { left: 99.9%}
+    to { left: 66.6%}
+}
+
+.forwardImgMobSlide3{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgMobSlide3;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 33.3%;
+    opacity: 1;
+}
+@keyframes forwardImgMobSlide3 {   
+    from { left: 66.6%; opacity: 0.5;}
+    to { left: 33.3%; opacity: 1;}
+}
+
+.forwardImgMobSlide2{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgMobSlide2;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 0%;
+    opacity: 0.5;
+}
+@keyframes forwardImgMobSlide2 {   
+    from { left: 33.3%; opacity: 1;}
+    to { left: 0%; opacity: 0.5;}
+}
+
+.forwardImgMobSlide{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardImgMobSlide;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: -33.3%;
+}
+@keyframes forwardImgMobSlide {   
+    from { left: 0%}
+    to { left: -33.3%}
+}
+
+.reverseImgMobSlide4{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseImgMobSlide4;
+animation-timing-function: ease, ease;
+left: 99%;
+position: absolute!important;
+}
+@keyframes reverseImgMobSlide4 {   
+from { left: 66.6%}
+to { left: 99.9%}
+}
+
+.reverseImgMobSlide3{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseImgMobSlide3;
+animation-timing-function: ease, ease;
+left: 66.6%;
+position: absolute!important;
+opacity: 0.5;
+}
+@keyframes reverseImgMobSlide3 {   
+from { left: 33.3%; opacity: 1;}
+to { left: 66.6%; opacity: 0.5;}
+}
+
+.reverseImgMobSlide2{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseImgMobSlide2;
+animation-timing-function: ease, ease;
+left: 33.3%;
+position: absolute!important;
+opacity: 1;
+}
+@keyframes reverseImgMobSlide2 {   
+from { left: 0%; opacity: 0.5;}
+to { left: 33.3%; opacity: 1;}
+}
+
+.reverseImgMobSlide{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseImgMobSlide;
+animation-timing-function: ease, ease;
+left: 0%;
+position: absolute!important;
+}
+@keyframes reverseImgMobSlide {   
+from { left: -33.3%}
+to { left: 0%; }
+}
+
+              .forwardSlide4{
+                  animation-duration: 0.5s;
+                  animation-iteration-count: 1;
+                  transform-origin: center;
+                  animation-name: forwardSlide4;
+                  animation-timing-function: ease, ease;
+                  position: absolute!important;
+                  left: 66.6%;
+              }
+              @keyframes forwardSlide4 {   
+                  from { left: 99.9%}
+                  to { left: 66.6%}
+              }
+
+              .forwardSlide3{
+                  animation-duration: 0.5s;
+                  animation-iteration-count: 1;
+                  transform-origin: center;
+                  animation-name: forwardSlide3;
+                  animation-timing-function: ease, ease;
+                  position: absolute!important;
+                  left: 33.3%;
+              }
+              @keyframes forwardSlide3 {   
+                  from { left: 66.6%}
+                  to { left: 33.3%}
+              }
+
+              .forwardSlide2{
+                  animation-duration: 0.5s;
+                  animation-iteration-count: 1;
+                  transform-origin: center;
+                  animation-name: forwardSlide2;
+                  animation-timing-function: ease, ease;
+                  position: absolute!important;
+                  left: 0%;
+              }
+              @keyframes forwardSlide2 {   
+                  from { left: 33.3%}
+                  to { left: 0%}
+              }
+
+              .forwardSlide{
+                  animation-duration: 0.5s;
+                  animation-iteration-count: 1;
+                  transform-origin: center;
+                  animation-name: forwardSlide;
+                  animation-timing-function: ease, ease;
+                  position: absolute!important;
+                  left: -33.3%;
+              }
+              @keyframes forwardSlide {   
+                  from { left: 0%}
+                  to { left: -33.3%}
+              }
+
+.reverseSlide4{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseSlide4;
+animation-timing-function: ease, ease;
+left: 99%;
+position: absolute!important;
+}
+@keyframes reverseSlide4 {   
+    from { left: 66.6%}
+    to { left: 99.9%}
+}
+
+.reverseSlide3{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseSlide3;
+animation-timing-function: ease, ease;
+left: 66.6%;
+position: absolute!important;
+}
+@keyframes reverseSlide3 {   
+from { left: 33.3%}
+to { left: 66.6%; }
+}
+
+.reverseSlide2{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseSlide2;
+animation-timing-function: ease, ease;
+left: 33.3%;
+position: absolute!important;
+}
+@keyframes reverseSlide2 {   
+from { left: 0%}
+to { left: 33.3%; }
+}
+
+.reverseSlide{
+animation-duration: 0.5s;
+animation-iteration-count: 1;
+transform-origin: center;
+animation-name: reverseSlide;
+animation-timing-function: ease, ease;
+left: 0%;
+position: absolute!important;
+}
+@keyframes reverseSlide {   
+from { left: -33.3%}
+to { left: 0%; }
+}
+
+.forwardMobileSlide{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardMobileSlide;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: -100%;
+}
+@keyframes forwardMobileSlide {   
+    from { left: 0%}
+    to { left: -100%; }
+}
+
+.forwardMobileSlide2{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: forwardMobileSlide2;
+    animation-timing-function: ease, ease;
+    position: absolute!important;
+    left: 0%;
+}
+@keyframes forwardMobileSlide2 {   
+    from { left: 100%}
+    to { left: 0%; }
+}
+  
+  .reverseMobileSlide{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseMobileSlide;
+    animation-timing-function: ease, ease;
+    left: 0%;
+    position: absolute!important;
+  }
+  @keyframes reverseMobileSlide {   
+    from { left: -100%}
+    to { left: 0%; }
+  }
+
+  .reverseMobileSlide2{
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    animation-name: reverseMobileSlide2;
+    animation-timing-function: ease, ease;
+    left: 100%;
+    position: absolute!important;
+  }
+  @keyframes reverseMobileSlide2 {   
+    from { left: 0%}
+    to { left: 100%; }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .directionImgArrow span {
+        top: 20%;
+        font-size: 10px;
+    }
+
+    span.prevImgLeft {
+        left: 47px;
+    }
+
+    span.nextImgRight {
+        right: 47px;
+    }
+
+    .imageMobOver {
+        max-width: 75%;
+        min-height: 200px;
+        padding: 20px 0px;
+    }
+
+    .subHead {
+        line-height: normal;
+    }
+  div#imageCrousel {
+      display: none;
+  }
+
+  }
+
+  @media only screen and (max-width: 500px) {
+    .subHead {
+        font-size: 18px;
+    }
+
+    .imgContentTxt {
+        font-size: 16px;
+    }
+
+    .imgDiv {
+        height: 100px!important;
+    }
+
+    .imageMobOver {
+    max-width: 90%;
+    padding: 20px 0px;
+  }
+
+.directionImgArrow span {
+    top: 30%;
+    padding: 4% 1%;
+}
+
+span.prevImgLeft {
+    left: 0%;
+}
+
+span.nextImgRight {
+    right: 0%;
+}
+}
+.imgBody {
+    width: 100%!important;
+}
+button#choosethefile {
+    background-color: #81d052;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 7px 15px 7px 15px;
+    cursor: pointer;
+}
+input#collect_pro_slides, input#edit_collect_pro_slides {
+    color: #81d052;
+    border: none;
+    background-color: #d8f5ff;
+    font-size: 80px;
+    font-weight: lighter;
+    padding: 0px 130px 0px 130px;
+    border-radius: 10px;
+}
+button#add__pro__slides{
+    margin-top:5%;
+    background-color: #fb60a2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding:7px 30px 7px 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+button.updatepro___slides{
+    margin-top:2%;
+    background-color: #fb60a2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding:7px 30px 7px 30px;
+    cursor: pointer;
+}
+h3.uploadme {
+    color: #888888;
+}
+.pr_col {
+    background: linear-gradient( 
+0deg
+ , #1cc8cc, #edfff9 100%);
+    text-align: center;
+}
+h3.pr__heading {
+    color: #fff;
+    font-size: 36px;
+}
+span.bx_slider {
+    background-color: #1cc8cc;
+    padding: 0px 20px 0px 20px;
+    box-shadow: 29px 16px 34px #fff;
+    border-radius: 10px;
+}
+p.pro__team__icon >a {
+    font-size: 31px;
+    margin: 0px 10px 0px 10px;
+    color: #ffff;
+}
+.card-carousel{
+    text-align: center;
+}
+.imgwrap > img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 5px solid #1cc8cc;
+}
+/* div#see__pro__slides {
+    display: flex;
+    flex-flow: inherit;
+} */
+div#see__pro__slides> .imgwrap {
+    padding: 1%;
+}
+div#see__pro__slides> .imgwrap>.removeicon, i.fa.fa-times.removeicon {
+    color: #fff;
+    position: absolute;
+    margin-left: -11px;
+    margin-top: -5px;
+    font-size: 12px;
+    border: 4px solid red;
+    background-color: red;
+    cursor: pointer;
+}
+a.edit__slides > i.fa.fa-edit {
+    color: #1cc8cc;
+}
+
+a.edit__slides > i.fa.fa-edit:hover {
+    transform: scale(1.5);
+}
+
+td#deletedata > a.delete_pro__slides > i.fa.fa-trash {
+    color: #fd5454;
+}
+td#deletedata > a.delete_pro__slides {
+    cursor: pointer;
+}
+
+td#deletedata > a.delete_pro__slides > i.fa.fa-trash:hover {
+    transform: scale(1.5);
+}
+img.proslider_img_on__edit_mode {
+    border: 7px solid #1cc8cc;
+}
+.col-sm-12.col-md-3.col-lg-3.mt-2.pro_slider_edit_mode_column > img {
+    object-fit: cover;
+    border: 7px solid #1cc8cc;
+}
+.pro__slides_added__successfully {
+    text-align: center;
+    color: green;
+}
+.pro__slides_added__successfully >h3 {
+    color: green;
+}
+.pro__slides_added__successfully >p {
+    color: green;
+    font-size: 20px;
+}
+input#collect_pro_slider_name {
+    width: 312px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #888888;
+    border-color: #81d052;
+    box-shadow: 0 0 0 1px #81d052;
+    outline: 2px solid transparent;
+}
+input#collect_pro_slider_name:focus{
+    border-color: #1cc8cc;
+    box-shadow: 0 0 0 1px #1cc8cc;
+    outline: 2px solid transparent;
+}
+input#collect_pro_slider_name::placeholder{
+    font-weight: 600;
+    color: #888888;
+}
+p.pro__team__icon > i {
+    cursor: pointer;
+}
+div#see__pro__slides {
+    margin-top: 5%;
+}
+input#copyshotcode {
+    width: 90%;
+}
+#go__premeum_main_div{
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h2#MNpro> span {
+    background-color: #21CCC5;
+    color: #fff;
+    padding: 5px 20px 5px 20px;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+}
+hr#hrst {
+    width: 14%;
+    height: 3px;
+    margin-top: 7%;
+}
+div#features__list__is__here>p {
+    color: #888888;
+    font-size: 18px;
+    padding: 1%;
+}
+div#features__list__is__here>button {
+    margin: 1%;
+    border: none;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 49%);
+    padding: 10px 30px 10px 30px;
+}
+div#features__list__is__here>button>a {
+    color: #21CDC1;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+i.icon_para {
+    color: #21CDC1;
+    margin-right: 3%;
+    font-size: 25px;
+}
+#MNpro{
+    color:#888888;
+    font-weight: 400;
+}
+textarea#collect_pro_slider_url {
+    width: 312px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: #888888;
+    border-color: #81d052;
+    box-shadow: 0 0 0 1px #81d052;
+    outline: 2px solid transparent;
+}
+textarea#collect_pro_slider_url::placeholder{
+    font-weight: 600;
+    color: #888888;
+}
+textarea#collect_pro_slider_url:focus{
+    border-color: #1cc8cc;
+    box-shadow: 0 0 0 1px #1cc8cc;
+    outline: 2px solid transparent;
+}
